@@ -14,7 +14,7 @@ The project extends the original FlapPyBird implementation by integrating a real
 
 ## Demo
 
-[Demo Video](./demo.mp4)
+![Demo](./demo.gif)
 
 ## Controls
 
