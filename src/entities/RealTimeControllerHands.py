@@ -4,7 +4,7 @@ import mediapipe as mp
 mp_drawing = mp.solutions.drawing_utils
 mp_hands = mp.solutions.hands
 
-HANDS_MOVE_THRESHOLD = 80
+# HANDS_MOVE_THRESHOLD = 50
 
 
 class HandTracker:
@@ -15,7 +15,7 @@ class HandTracker:
             model_complexity=0,
             max_num_hands=1,
             min_detection_confidence=0.5,
-            min_tracking_confidence=0.5
+            min_tracking_confidence=0.4
         )
 
         self.prev_finger_x = None
@@ -49,12 +49,12 @@ class HandTracker:
 
                 finger_x = int(finger.x * width)
                 finger_y = int(finger.y * height)
-
+                HANDS_MOVE_THRESHOLD = height *0.05
                 if self.prev_finger_y is not None:
 
                     if -(self.prev_finger_y - finger_y) > HANDS_MOVE_THRESHOLD:
                         movement = "Flap"
-
+                        
                         cv2.putText(
                             frame,
                             "Flap Detected!",
