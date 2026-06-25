@@ -50,6 +50,7 @@ class HandTracker:
                 finger_x = int(finger.x * width)
                 finger_y = int(finger.y * height)
                 HANDS_MOVE_THRESHOLD = height *0.05
+                
                 if self.prev_finger_y is not None:
 
                     if -(self.prev_finger_y - finger_y) > HANDS_MOVE_THRESHOLD:

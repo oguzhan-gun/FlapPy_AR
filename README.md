@@ -1,5 +1,11 @@
 # Gesture Controlled Flappy Bird
 
+![Python](https://img.shields.io/badge/Python-3.x-blue)
+![MediaPipe](https://img.shields.io/badge/MediaPipe-0.10.20-orange)
+![OpenCV](https://img.shields.io/badge/OpenCV-Computer%20Vision-green)
+![Gesture Control](https://img.shields.io/badge/Input-Gesture%20Control-purple)
+![Pygame](https://img.shields.io/badge/Game-Pygame-red)
+
 A real-time gesture controlled Flappy Bird project developed using Python, OpenCV, MediaPipe, and Pygame.
 
 The project extends the original FlapPyBird implementation by integrating a real-time hand tracking and gesture recognition system for controlling the bird without keyboard input.
